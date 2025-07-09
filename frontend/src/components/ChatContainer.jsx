@@ -51,7 +51,7 @@ const ChatContainer = () => {
 
     //this is the problem , you are creating a new socket instance every time the component mounts
     if (!socketRef.current) {
-      socketRef.current = io("http://localhost:5001");
+      socketRef.current = io(import.meta.env.VITE_SOCKET_URL);
     }
 
 
