@@ -5,7 +5,7 @@ import { useAuthStore } from "../store/useAuthStore";
 import { io } from "socket.io-client";
 import { PhoneOff, PhoneIncoming, PhoneCall } from "lucide-react";
 
-const socket = io("http://localhost:5001");
+const socket = io(import.meta.env.VITE_SOCKET_URL);
 
 const VideoCallPage = () => {
   const { userId } = useParams();
